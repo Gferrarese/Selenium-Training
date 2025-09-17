@@ -2,7 +2,7 @@ Selenium Demo Automation Project
 ===============================
 
 This project demonstrates basic browser automation using Selenium WebDriver in Python. It opens the Applitools demo login page, enters test credentials, and submits the form.
-This projcet is oriented to practice the main functions for Selenenium and it 
+This projcet is oriented to practice the main functions for Selenenium and it capabilities.
 
 Project Structure:
 ------------------
@@ -32,6 +32,7 @@ How to Run:
 
 3. Follow the prompt to close the browser after execution.
 
-Author:
+Author: 
+Gabriel Ferraree
 -------
 Your
