@@ -1,0 +1,24 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By 
+from selenium.webdriver.chrome.options import Options # Allows to set options for Chrome
+
+class TestGeneralSetup:
+    options = Options()
+    options.add_experimental_option("excludeSwitches", ["enable-logging"])
+    driverChrome = webdriver.Chrome(options=options)
+    driverChrome.implicitly_wait(30)  # Waits up to 10 seconds for elements to appear
+    driverChrome.get("https://demo.applitools.com/")
+    # Finding elements
+    username = driverChrome.find_element(By.ID, "username")
+    password = driverChrome.find_element(By.ID, "password")
+    signInButton = driverChrome.find_element(By.ID, "log-in")
+
+    driverChrome.implicitly_wait(10)  # Waits up to 10 seconds for elements to appear
+
+    # Interacting with elements
+    username.send_keys("test")
+    password.send_keys("test")
+    signInButton.click()
+
+    input("Press Enter to close the browser...")
+    driverChrome.quit() # Without it the browser will remain open
